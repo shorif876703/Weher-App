@@ -66,7 +66,7 @@ export default function Wether() {
         }
     }
     useEffect(() => {
-        search("Bangladesh")
+        search("aricha")
     },[])
 
   return (
