@@ -82,7 +82,7 @@
 
 /* Website responsive css */
 
-@media(min-width: 320) {
+@media(min-width: 420) {
 
     .search-bar button {
         display: none;
