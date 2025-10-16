@@ -79,3 +79,19 @@
     font-weight: 800;
     font-size: 25px;
 }
+
+/* Website responsive css */
+
+@media(min-width: 320) {
+
+    .search-bar button {
+        display: none;
+        color: #000000;
+    }
+
+    .weather-img {
+    width: fit-content;
+    margin: 30px 0;
+    }
+
+}

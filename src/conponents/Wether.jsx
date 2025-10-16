@@ -70,7 +70,7 @@ export default function Wether() {
     },[])
 
   return (
-      <div className='weather md:w-fu'>
+      <div className='weather'>
           <h2 className='errMsg'>{errMsg}</h2>
         <div className="search-bar">
             <input type="text" placeholder='Search' ref={inputRef}  onChange={() => search(inputRef.current.value)} />
