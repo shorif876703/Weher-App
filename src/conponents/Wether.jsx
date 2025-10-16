@@ -57,6 +57,8 @@ export default function Wether() {
                 humidity: data.main.humidity,
                 windSpeed: data.wind.speed,
                 temperature: Math.floor(data.main.temp),
+                min_temperature: Math.floor(data.main.temp_min),
+                max_temperature: Math.floor(data.main.temp_max),
                 location: data.name,
                 icon: icon,
             })
@@ -77,9 +79,17 @@ export default function Wether() {
             <button onClick={() => search(inputRef.current.value)}>Search</button>
           </div>
           {weatherData ? <>
+              <div className="">
+                  <span>Min Temperature</span>
+                  <p>{weatherData.min_temperature}</p>
+              </div>
           <img src={weatherData.icon} className='weather-img' />
           <p className='temperature'>{weatherData.temperature}°</p>
-          <p className='location'>{weatherData.location}</p>
+              <p className='location'>{weatherData.location}</p>
+              <div className="">
+                  <span>Max Temperature</span>
+                  <p>{weatherData.max_temperature}</p>
+              </div>
           <div className="weather-data">
               <div className="col">
                   <img src={humidity_img}/>
